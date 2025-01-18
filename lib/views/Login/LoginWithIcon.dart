@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginWithIcon extends StatelessWidget {
   const LoginWithIcon({
@@ -11,7 +12,7 @@ class LoginWithIcon extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: Image.asset('assets/image/google.png'),
+          icon: SvgPicture.asset('assets/image/google.svg'),
           iconSize: 50,
           onPressed: () {
             // تنفيذ الإجراء
@@ -19,7 +20,7 @@ class LoginWithIcon extends StatelessWidget {
         ),
         const SizedBox(width: 30),
         IconButton(
-          icon: Image.asset('assets/image/apple.png'),
+          icon: SvgPicture.asset('assets/image/apple.svg'),
           iconSize: 50,
           onPressed: () {
             // تنفيذ الإجراء
@@ -27,7 +28,7 @@ class LoginWithIcon extends StatelessWidget {
         ),
         const SizedBox(width: 30),
         IconButton(
-          icon: Image.asset('assets/image/facebook.png'),
+          icon: SvgPicture.asset('assets/image/facebook.svg'),
           iconSize: 50,
           onPressed: () {
             // تنفيذ الإجراء

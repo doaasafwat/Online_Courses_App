@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/views/Forget%20Password/forget_password.dart';
 import 'package:online_courses_app/views/Home/home_view.dart';
@@ -20,7 +21,7 @@ class LoginViewBody extends StatelessWidget {
             height: 70,
           ),
           Center(
-            child: Image.asset('assets/image/imageLogin.png'),
+            child: SvgPicture.asset('assets/image/imageLogin.svg'),
           ),
           const SizedBox(
             height: 20,
@@ -90,11 +91,11 @@ class LoginViewBody extends StatelessWidget {
               text: 'Log In',
               onPressed: () {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) {
-                      return const HomeView();
-                    }),
-                  );
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const HomeView();
+                  }),
+                );
               },
               color: primaryColor,
               textColor: Colors.white,

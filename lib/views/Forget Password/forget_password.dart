@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/widgets/custom_button.dart';
 import 'package:online_courses_app/widgets/text_field.dart';
@@ -9,14 +10,14 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffE6F4FA),
+      backgroundColor: backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(
               height: 80,
             ),
-            Image.asset('assets/image/forgetPassword.png'),
+            SvgPicture.asset('assets/image/forgetpassword.svg'),
             const SizedBox(
               height: 20,
             ),

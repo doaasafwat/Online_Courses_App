@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/views/Login/login_view.dart';
 import 'package:online_courses_app/views/Sign%20Up/sign_up_view.dart';
 import 'package:online_courses_app/widgets/custom_button.dart';
@@ -53,7 +54,7 @@ class _SplashViewState extends State<SplashView>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff104B63),
+      backgroundColor: primaryColor,
       body: Column(
         children: [
           const SizedBox(height: 100),

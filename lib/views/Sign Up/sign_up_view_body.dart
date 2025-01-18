@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/views/Login/LoginWithIcon.dart';
 import 'package:online_courses_app/views/Login/login_view.dart';
@@ -18,7 +19,7 @@ class SignUpViewBody extends StatelessWidget {
             height: 70,
           ),
           Center(
-            child: Image.asset('assets/image/imageSignUp.png'),
+            child: SvgPicture.asset('assets/image/imageSignUp.svg'),
           ),
           const SizedBox(
             height: 20,
