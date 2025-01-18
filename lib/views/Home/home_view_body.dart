@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:online_courses_app/widgets/circle_instructor_list_view.dart';
 import 'package:online_courses_app/widgets/courses_card_list_view.dart';
 import 'package:online_courses_app/widgets/search_bar.dart';
