@@ -11,10 +11,11 @@ class CategoriesView extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
-        backgroundColor: backgroundColor,
+        backgroundColor: const Color.fromARGB(255, 224, 243, 250),
         automaticallyImplyLeading: false,
+        elevation: 1,
+        shadowColor: const Color.fromARGB(255, 224, 243, 250),
         centerTitle: true,
-        elevation: 0,
         title: const Text(
           'Category',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),

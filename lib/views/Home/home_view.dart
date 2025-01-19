@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
     const HomeViewBody(),
     const CategoriesView(),
     const CoursesView(),
-    const CartView(),
+   const CartView(),
     const ProfileView(),
   ];
 
