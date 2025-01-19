@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/views/ShowAll/show_all_list_view.dart';
+import 'package:online_courses_app/widgets/search_bar.dart';
 
-class ShowAllView extends StatelessWidget {
-  const ShowAllView({Key? key, required this.title}) : super(key: key);
-  final String title;
+class SearchView extends StatelessWidget {
+  const SearchView({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,9 +21,9 @@ class ShowAllView extends StatelessWidget {
           },
         ),
         centerTitle: true,
-        title: Text(
-          title,
-          style: const TextStyle(
+        title: const Text(
+          'Search',
+          style: TextStyle(
             color: Colors.black,
             fontSize: 20,
             fontWeight: FontWeight.w500,
@@ -33,7 +34,8 @@ class ShowAllView extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
-            SizedBox(height: 8),
+            CustomSearchBar(),
+            SizedBox(height: 12),
             Expanded(
               child: ShowAllListView(),
             ),
