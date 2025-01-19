@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_courses_app/views/ShowAll/show_all_view.dart';
 import 'package:online_courses_app/widgets/circle_instructor_list_view.dart';
 import 'package:online_courses_app/widgets/courses_card_list_view.dart';
 import 'package:online_courses_app/widgets/search_bar.dart';
@@ -16,15 +17,39 @@ class HomeViewBody extends StatelessWidget {
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const CustomSearchBar(),
             const SizedBox(height: 10),
-            SectionHeader(title: 'New Courses', onShowAll: () {}),
+            SectionHeader(
+                title: 'New Courses',
+                onShowAll: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ShowAllView(
+                      title: 'New Courses',
+                    );
+                  }));
+                }),
             const SizedBox(height: 4),
             const CoursesCardListView(),
             const SizedBox(height: 10),
-            SectionHeader(title: 'Top-Rated Courses', onShowAll: () {}),
+            SectionHeader(
+                title: 'Top-Rated Courses',
+                onShowAll: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ShowAllView(
+                      title: 'Top-Rated Courses',
+                    );
+                  }));
+                }),
             const SizedBox(height: 4),
             const CoursesCardListView(),
             const SizedBox(height: 10),
-            SectionHeader(title: 'Recommended', onShowAll: () {}),
+            SectionHeader(
+                title: 'Recommended',
+                onShowAll: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ShowAllView(
+                      title: 'Recommended',
+                    );
+                  }));
+                }),
             const SizedBox(height: 4),
             const CoursesCardListView(),
             const SizedBox(height: 10),
