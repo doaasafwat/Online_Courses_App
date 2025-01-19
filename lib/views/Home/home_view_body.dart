@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_courses_app/views/ShowAll/show_all_instructor.dart';
 import 'package:online_courses_app/views/ShowAll/show_all_view.dart';
 import 'package:online_courses_app/widgets/circle_instructor_list_view.dart';
 import 'package:online_courses_app/widgets/courses_card_list_view.dart';
@@ -53,7 +54,15 @@ class HomeViewBody extends StatelessWidget {
             const SizedBox(height: 4),
             const CoursesCardListView(),
             const SizedBox(height: 10),
-            SectionHeader(title: 'Instructors', onShowAll: () {}),
+            SectionHeader(
+                title: 'Instructors',
+                onShowAll: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const ShowAllInstructor(
+                      title: 'Instructors',
+                    );
+                  }));
+                }),
             const SizedBox(height: 4),
             const CircleInstructorListView(),
           ]),
