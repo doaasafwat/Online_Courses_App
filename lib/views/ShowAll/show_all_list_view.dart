@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:online_courses_app/views/ShowAll/show_all_course_card.dart';
 
