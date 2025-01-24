@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
     const HomeViewBody(),
     const CategoriesView(),
     const CoursesView(),
-   const CartView(),
+    const CartView(),
     const ProfileView(),
   ];
 
@@ -165,6 +165,7 @@ class _HomeViewState extends State<HomeView> {
                   onTap: () {
                     setState(() {
                       _isCentralIconPressed = true;
+                      _currentIndex = 2; 
                     });
                   },
                   child: Container(
