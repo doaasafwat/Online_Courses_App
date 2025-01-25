@@ -3,6 +3,7 @@ import 'package:online_courses_app/const.dart';
 import 'package:online_courses_app/views/Cart/cart_view.dart';
 import 'package:online_courses_app/views/Categories/categories_view.dart';
 import 'package:online_courses_app/views/Home/home_view_body.dart';
+import 'package:online_courses_app/views/Notification/notification_view.dart';
 import 'package:online_courses_app/views/Profile/profile_view.dart';
 import 'package:online_courses_app/views/courses/courses_view.dart';
 
@@ -68,7 +69,16 @@ class _HomeViewState extends State<HomeView> {
                       ],
                     ),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const NotificationView();
+                            },
+                          ),
+                        );
+                      },
                       icon: const Icon(Icons.notifications_outlined,
                           color: Colors.black),
                     ),
@@ -165,7 +175,7 @@ class _HomeViewState extends State<HomeView> {
                   onTap: () {
                     setState(() {
                       _isCentralIconPressed = true;
-                      _currentIndex = 2; 
+                      _currentIndex = 2;
                     });
                   },
                   child: Container(
