@@ -33,6 +33,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: _currentIndex == 0
           ? AppBar(
               automaticallyImplyLeading: false,
+              surfaceTintColor: backgroundColor,
               elevation: 0,
               backgroundColor: backgroundColor,
               title: const Row(
@@ -73,9 +74,7 @@ class _HomeViewState extends State<HomeView> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) {
-                              return const NotificationView();
-                            },
+                            builder: (context) => const NotificationView(),
                           ),
                         );
                       },
@@ -93,7 +92,9 @@ class _HomeViewState extends State<HomeView> {
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+              topLeft: Radius.circular(16),
+              topRight: Radius.circular(16),
+            ),
             child: BottomNavigationBar(
               currentIndex: _currentIndex,
               onTap: (index) {
@@ -160,24 +161,21 @@ class _HomeViewState extends State<HomeView> {
           Positioned(
             top: -30,
             left: MediaQuery.of(context).size.width / 2 - 35,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Container(
-                  width: 70,
-                  height: 70,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  _isCentralIconPressed = true;
+                  _currentIndex = 2;
+                });
+              },
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  shape: BoxShape.circle,
                 ),
-                GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _isCentralIconPressed = true;
-                      _currentIndex = 2;
-                    });
-                  },
+                child: Center(
                   child: Container(
                     width: 50,
                     height: 50,
@@ -192,7 +190,7 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                 ),
-              ],
+              ),
             ),
           ),
         ],
